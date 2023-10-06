@@ -166,6 +166,18 @@ develop-build: \
 	@cp \
 		${FILE_BUILD_RESOURCES} ${DIRECTORY_PY_SOURCES}
 
+dev: \
+	check-pyside-setup \
+	develop-clean \
+	compile-resources
+
+	@# Generates resources and copies them into the source directory
+	@# This allows to develop/debug the project normally
+
+	@cp \
+		${FILE_BUILD_RESOURCES} ${DIRECTORY_PY_SOURCES}
+	@python ${NAME_FILE_MAIN_ENTRY}
+
 
 develop-clean:
 	@# Cleans up the compiled resources in the source directory

@@ -20,6 +20,7 @@ import QtQuick
 import QtQuick.Controls
 import QtQuick.Layouts
 import components.header
+import components.button
 import pyobjects
 
 
@@ -31,8 +32,19 @@ Page {
         id: aboutTab
         spacing: 8
         width: parent.width
+        height: parent.height
 
         Rectangle { color: "transparent"; height: 30; width: 10 }
+
+        ComPortButton{
+            Component.onCompleted:{
+                console.log("comport finished")
+            }
+        }
+
+        Rectangle { color: "transparent"; height: 30; width: 100 }
+        Rectangle { color: "transparent"; height: 30; width: 100 }
+        Rectangle { color: "transparent"; height: 30; width: 100 }
 
         Image {
             source: "qrc:/data/app-icon.svg"
@@ -51,12 +63,6 @@ Page {
             Layout.alignment: Qt.AlignHCenter
         }
 
-        Label {
-            text: 'Running on ' +  Qt.platform.os
-            font.bold: true
-            font.pixelSize: Qt.application.font.pixelSize * 1.5
-            Layout.alignment: Qt.AlignHCenter
-        }
 
         Rectangle { color: "transparent"; height: 45; width: 10 }
 

@@ -1,0 +1,3 @@
+[submodule "OMEPySideCore"]
+	path = OMEPySideCore
+	url = http://git-svr:8888/BioSoftware/OMEPySideCore.git
