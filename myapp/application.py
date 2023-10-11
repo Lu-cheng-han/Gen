@@ -31,7 +31,7 @@ class MyApplication(QGuiApplication):
         self._translator_qt = QTranslator()
 
     def set_window_icon(self):
-        icon = QIcon(':/data/app-icon.svg')
+        icon = QIcon(':/data/shiba.jpg')
         self.setWindowIcon(icon)
 
     def set_up_signals(self):

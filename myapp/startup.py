@@ -24,13 +24,13 @@ class PreStartUp:
     @staticmethod
     def set_qt_application_name():
         from PySide6.QtCore import QCoreApplication
-        QCoreApplication.setApplicationName('my app name')
-        QCoreApplication.setOrganizationName('my org name')
+        QCoreApplication.setApplicationName('Siba PCTool')
+        QCoreApplication.setOrganizationName('OME')
 
     @staticmethod
     def set_qt_application_version():
         from PySide6.QtCore import QCoreApplication
-        QCoreApplication.setApplicationVersion('my app version')
+        QCoreApplication.setApplicationVersion('0:0:1')
 
     @staticmethod
     def inject_environment_variables():
@@ -54,6 +54,7 @@ class StartUp:
     def import_bindings():
         try:
             import myapp.pyobjects
+            import src.system
         except ImportError as e:
             print(e, file=sys.stderr)
             sys.exit(1)

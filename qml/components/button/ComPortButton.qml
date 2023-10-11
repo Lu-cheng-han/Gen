@@ -3,24 +3,30 @@ import QtQuick.Controls
 import QtQuick.Layouts
 
 
-Row {
+RowLayout {
+    id: idRowLayoutComPort 
+    property alias idButtonRed: idButtonRed
+    property alias idComboBoxPort : idComboBoxPort 
+    signal open()
+
     Image {
+        id: idButtonRed
         source: "qrc:/data/icons/red_circle.png"
-        height: parent.height 
-        width: parent.height
         asynchronous: true
+        Layout.preferredHeight: parent.height
+        Layout.preferredWidth: parent.height
         fillMode: Image.PreserveAspectFit 
     }
     ComboBox {
+        id: idComboBoxPort
         hoverEnabled: false
-        height: parent.height
-        width: parent.width / 2
+        Layout.fillWidth: true
     }
     Button {
-        height: parent.height
-        width: parent.width / 5
-        text: "OK"
+        id: idButtonOpenPort
+        text: "Open"
         onClicked: {
+            idRowLayoutComPort.open()
         }
     }
 }

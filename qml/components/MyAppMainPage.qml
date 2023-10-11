@@ -22,6 +22,7 @@ import QtQuick.Layouts
 import components.header
 import components.button
 import pyobjects
+import system
 
 
 Page {
@@ -36,9 +37,22 @@ Page {
 
         Rectangle { color: "transparent"; height: 30; width: 10 }
 
-        ComPortButton{
-            Component.onCompleted:{
-                console.log("comport finished")
+        RowLayout{
+            Layout.preferredWidth: parent.width
+            spacing: 20
+            ComPortButton{
+                width: parent.width
+                idComboBoxPort.model: PortController.port_list
+                onOpen:{
+                }
+            }
+            ComPortButton{
+                width: parent.width
+                idComboBoxPort.model: PortController.port_list
+            }
+            ComPortButton{
+                width: parent.width
+                idComboBoxPort.model: PortController.port_list
             }
         }
 
