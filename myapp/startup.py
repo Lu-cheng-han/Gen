@@ -62,6 +62,9 @@ class StartUp:
     @staticmethod
     def start_application():
         from myapp.application import MyApplication
+        import signal
+        signal.signal(signal.SIGINT, signal.SIG_DFL)
+        
         app = MyApplication(sys.argv)
 
         app.set_window_icon()
@@ -69,8 +72,8 @@ class StartUp:
         app.set_up_imports()
         app.start_engine()
         app.verify()
-
         sys.exit(app.exec())
+        
 
 
 def perform_startup():

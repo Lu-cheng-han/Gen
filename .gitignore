@@ -526,3 +526,6 @@ $RECYCLE.BIN/
 build-dir
 myapp/generated_resources.py
 test/generated_resources.py
+
+#OMEPySideCore
+./OMEPySideCore
