@@ -27,15 +27,13 @@ import system
 
 Page {
     anchors.fill: parent
-    header: MyAppHeader {}
+    // header: MyAppHeader {}
 
     ColumnLayout {
         id: aboutTab
         spacing: 8
         width: parent.width
         height: parent.height
-
-        Rectangle { color: "transparent"; height: 30; width: 10 }
 
         RowLayout{
             Layout.preferredWidth: parent.width

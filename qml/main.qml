@@ -27,7 +27,7 @@ ApplicationWindow {
     visible: true
     width: 1280
     height: 720
-    flags: Qt.FramelessWindowHint | Qt.Window
+    // flags: Qt.FramelessWindowHint | Qt.Window
 
     LayoutMirroring.enabled: Qt.application.layoutDirection === Qt.RightToLeft
     LayoutMirroring.childrenInherit: true
@@ -35,14 +35,14 @@ ApplicationWindow {
     property ApplicationWindow appWindow: window
     property int windowBorder: 5
 
-    MyAppWindowBorderMouseCurser {
-        borderWidth: windowBorder
-        anchors.fill: parent
-    }
+    // MyAppWindowBorderMouseCurser {
+    //     borderWidth: windowBorder
+    //     anchors.fill: parent
+    // }
 
-    MyAppWindowResizeHandler {
-        borderWidth: windowBorder
-    }
+    // MyAppWindowResizeHandler {
+    //     borderWidth: windowBorder
+    // }
 
     MyAppMainPage {
         anchors.fill: parent

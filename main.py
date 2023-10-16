@@ -2,9 +2,9 @@
 
 
 def main():
-    from myapp.startup import perform_startup
+    from myapp.startup import boot_loader
 
-    perform_startup()
+    boot_loader()
 
 
 if __name__ == '__main__':

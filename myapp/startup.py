@@ -76,7 +76,7 @@ class StartUp:
         
 
 
-def perform_startup():
+def boot_loader():
     we = PreStartUp()
     we.set_qt_application_name()
     we.set_qt_application_version()
